@@ -1,3 +1,4 @@
+import 'package:flash_card/FlashCard/pass_data.dart';
 import 'package:flutter/material.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 
@@ -118,6 +119,10 @@ class _FlashCardPageState extends State<FlashCardPage> {
                 }, child: Text('Wrong'),
                 style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.red)),
                 ),
+                ElevatedButton(onPressed: (){
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context)=>PassingDataPage(count: count, attempt: attempt,)));
+                }, child: Text('Passing Data'))
               ],
             ),
 
