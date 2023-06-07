@@ -16,14 +16,11 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
-//       Scaffold(
-// appBar: AppBar(
-//   title: Text('Circle Image'),
-// ),
-//
-//         ),
-//       ),
+      routes: {
+        '/': (context)=>HomePage(),
+        '/flashcard': (context)=>FlashCardPage(),
+      },
+     // home: HomePage(),
     );
   }
 }
@@ -55,8 +52,7 @@ class HomePage extends StatelessWidget {
             ),
           ),
           ElevatedButton(onPressed: (){
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => FlashCardPage()));
+            Navigator.pushNamed(context, '/flashcard');
             //Navigator.push(context, MaterialPageRoute(builder: (context)=>FlashCardPage()));
             }, child: Text('Flash Card App'))],
         ),

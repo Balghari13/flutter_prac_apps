@@ -27,6 +27,7 @@ class PassingDataPage extends StatelessWidget {
 
             ],
           ),
+
         ),
       ),
     );
